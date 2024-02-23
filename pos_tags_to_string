@@ -1,0 +1,11 @@
+def pos_tags_to_string(pos_tags):
+    # Extract the second element of each tuple and enclose it in angle brackets
+    return ''.join(f'<{tag}>' for _, tag in pos_tags)
+
+
+# Example input
+example_pos_tags = [('revenues', 'rev'), ('greater', 'JJR'), ('$', '$'), ('325', 'CD'), ('million', 'unit')]
+
+# Apply the function to the example input
+result = pos_tags_to_string(example_pos_tags)
+print(result)
